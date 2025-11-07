@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,16 +36,24 @@ fun MovieItem(
             .clickable { onMovieClicked() },
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFFFFFE0) // Light Yellow
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary
         )
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
-                text = stringResource(id = R.string.movie_title_year, movie.title, movie.releaseYear),
+                text = stringResource(
+                    id = R.string.movie_title_year,
+                    movie.title,
+                    movie.releaseYear
+                ),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold
             )
-            Divider(modifier = Modifier.padding(vertical = 8.dp))
+            HorizontalDivider(
+                modifier = Modifier.padding(vertical = 8.dp),
+                color = MaterialTheme.colorScheme.outlineVariant
+            )
             Text(text = movie.overview, style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(8.dp))
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {

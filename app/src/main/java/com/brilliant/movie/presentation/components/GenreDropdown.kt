@@ -17,7 +17,7 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -28,7 +28,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -63,7 +62,7 @@ fun GenreDropdown(
                 Text(
                     text = stringResource(id = R.string.select_genre),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF007AFF)
+                    color = MaterialTheme.colorScheme.secondary
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -86,7 +85,7 @@ fun GenreDropdown(
                         modifier = Modifier.width(screenWidth - 32.dp),
                         shape = RoundedCornerShape(8.dp),
                         colors = CardDefaults.cardColors(
-                            containerColor = Color(0xFFFFFFE0) // Light Yellow
+                            containerColor = MaterialTheme.colorScheme.primary
                         )
                     ) {
                         LazyColumn {
@@ -143,7 +142,7 @@ private fun DropdownItemWithDivider(
             Spacer(modifier = Modifier.width(8.dp))
             Text(text = text, modifier = Modifier.weight(1f))
         }
-        Divider(color = Color.LightGray, thickness = 0.5.dp)
+        HorizontalDivider(color = MaterialTheme.colorScheme.tertiary, thickness = 0.5.dp)
     }
 }
 
