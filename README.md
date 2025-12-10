@@ -36,7 +36,7 @@ maintainable codebase.
 
 ## Development Philosophy & Reflections
 
-- **Pragmatic Problem-Solving:** When I faced with an issue of API timeouts on cold starts, my
+- **Pragmatic Problem-Solving:** I faced with an issue of API timeouts on cold starts, and my
   approach was to diagnose the cause and implement a practical solution (increasing the network
   timeout) rather than assuming a perfect backend.
 - **Proactive Enhancements & User-Centric Design:** My implementation went beyond the minimum
@@ -47,7 +47,7 @@ maintainable codebase.
   to perfectly match the wireframe. Most importantly, the error handling is to handle edge cases
   gracefully, ensuring the UI never lies to the user.
 
-### Next Steps & Potential Enhancements
+### Potential Enhancements
 
 - **Advanced Offline Caching:** Replace the OkHttp cache with a **Room database** to create a true
   single source of truth. This would allow for a more robust offline-first experience and instant
