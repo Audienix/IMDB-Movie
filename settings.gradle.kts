@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Brilliant Movie"
+rootProject.name = "IMDB Movie"
 include(":app")
  

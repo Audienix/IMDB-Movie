@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Movies App</string>
+    <string name="app_name">IMDB Movies</string>
     <string name="select_genre">Select Genre</string>
     <string name="all_genres">All</string>
     <string name="error_loading_movies">Error loading movies</string>

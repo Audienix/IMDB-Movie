@@ -1,7 +1,8 @@
-# Brilliant Movies App (Android)
+# IMDB Movies App (Android)
 
 This is a sample Android application that displays a list of movies from a remote API, demonstrating
-modern Android development practices.
+modern Android development practices. This entire application code, including unit tests have been
+written by **Gemini Agent in Android Studio**.
 
 ## Improvised Requirements
 
@@ -45,14 +46,6 @@ maintainable codebase.
   quality through iteration. The UI, especially the genre dropdown, was refined over several steps
   to perfectly match the wireframe. Most importantly, the error handling is to handle edge cases
   gracefully, ensuring the UI never lies to the user.
-
-### What I'd Do Differently
-
-If I could start over, I would implement the final, robust error-handling strategy and the custom
-dropdown component from the beginning. My initial attempts were too simplistic and led to several
-rounds of refactoring. Starting with a clearer definition of all possible UI states (loading,
-offline-initial, offline-cached, offline-uncached, content) would have led to a cleaner
-implementation path from the start.
 
 ### Next Steps & Potential Enhancements
 

@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.brilliant.movie"
+    namespace = "com.arighna.movie"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.brilliant.movie"
+        applicationId = "com.arighna.movie"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
