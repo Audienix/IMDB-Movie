@@ -2,6 +2,7 @@ package com.arighna.movie.data.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.arighna.movie.TestCoroutineRule
+import com.arighna.movie.data.local.MovieDatabase
 import com.arighna.movie.data.remote.MovieApi
 import com.arighna.movie.domain.model.Genre
 import io.mockk.coEvery
@@ -23,7 +24,8 @@ class MovieRepositoryImplTest {
     val testCoroutineRule = TestCoroutineRule()
 
     private val movieApi: MovieApi = mockk()
-    private val repository = MovieRepositoryImpl(movieApi)
+    private val movieDb: MovieDatabase = mockk()
+    private val repository = MovieRepositoryImpl(movieApi, movieDb)
 
     @Test
     fun `getGenres returns success result on successful fetch`() = runTest {

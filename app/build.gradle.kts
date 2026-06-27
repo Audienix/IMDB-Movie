@@ -49,6 +49,9 @@ android {
     }
 }
 
+ksp {
+    arg("room.generateKotlin", "true")
+}
 
 dependencies {
 
@@ -71,6 +74,13 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.paging)
+    testImplementation(libs.androidx.room.testing)
+
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
@@ -86,6 +96,7 @@ dependencies {
     // Paging
     implementation(libs.paging.runtime)
     implementation(libs.paging.compose)
+    testImplementation(libs.paging.common)
 
     // Testing
     testImplementation(libs.kotlinx.coroutines.test)
